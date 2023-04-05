@@ -7,6 +7,7 @@ import com.vmorg.exceptions.MachineNotCreatedException;
 import com.vmorg.exceptions.UserNotEntitledException;
 import com.vmorg.machine.Desktop;
 import com.vmorg.machine.Machine;
+import com.vmorg.machine.Server;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,6 +23,7 @@ import static org.mockito.Mockito.when;
 class RequestEngineTest {
     private RequestEngine underTest;
     private Desktop desktop;
+    private Server server;
 
     @Mock
     private AuthorisingService authorisingService;
@@ -37,6 +39,13 @@ class RequestEngineTest {
                 "gerald-tetteh",
                 2, 2, 12,
                 11, "21H2"
+        );
+        server = new Server(
+                "host20230328005",
+                "gerald-tetteh",
+                2, 2, 12,
+                "Ubuntu", 18,
+                "KL25Z", "Email Team"
         );
     }
 
@@ -91,5 +100,16 @@ class RequestEngineTest {
         assertEquals(1,buildData.size());
         var buildCount = buildData.get(desktop.getMachineType());
         assertEquals(2,buildCount);
+    }
+
+    @Test
+    void testDifferentMachineTypeBuild() throws MachineNotCreatedException, UserNotEntitledException {
+        when(authorisingService.isAuthorised(anyString())).thenReturn(true);
+        when(systemBuildService.createNewMachine(any(Machine.class))).thenReturn("host20230328005");
+        underTest.createNewRequest(desktop);
+        underTest.createNewRequest(server);
+        var buildsForDay = underTest.totalBuildsByUserForDay();
+        var buildData = buildsForDay.get(server.getNameOfRequester());
+        assertEquals(2,buildData.size());
     }
 }

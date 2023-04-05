@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f123fb33-1e64-4bee-b709-97b8f4e310a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/auth/AuthorisingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/build/SystemBuildService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/buildrequest/RequestEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/buildrequest/VirtualMachineRequester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/exceptions/InvalidHostnameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/exceptions/MachineNotCreatedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/exceptions/UserNotEntitledException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/machine/Desktop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/machine/Machine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/machine/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vmorg/buildrequest/RequestEngineTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vmorg/machine/MachineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/turntabl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vmorg/machine/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vmorg/machine/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vmorg/buildrequest/RequestEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vmorg/buildrequest/RequestEngineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

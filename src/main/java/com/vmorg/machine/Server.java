@@ -6,12 +6,12 @@ import com.vmorg.exceptions.InvalidHostnameException;
 public class Server extends Machine {
     private String linuxDistribution;
     private int majorDistributionNumber;
-    private int kernelVersion;
+    private String kernelVersion;
     private String administrativeTeam;
 
     public Server(String hostName, String nameOfRequester, int numberOfCpus,
                      double gbOfRam, double sizeOfHardDisk, String linuxDistribution,
-                     int majorDistributionNumber, int kernelVersion, String administrativeTeam) throws InvalidHostnameException {
+                     int majorDistributionNumber, String kernelVersion, String administrativeTeam) throws InvalidHostnameException {
         super(hostName, nameOfRequester, numberOfCpus, gbOfRam, sizeOfHardDisk, "Linux Machine");
         this.administrativeTeam = administrativeTeam;
         this.kernelVersion = kernelVersion;
